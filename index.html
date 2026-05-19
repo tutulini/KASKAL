@@ -117,7 +117,7 @@
   .landing-brand{
     display:flex; flex-direction:column; gap:18px;
   }
-  .landing-brand .km{ max-width:clamp(260px,38vw,560px); }
+  .landing-brand .km{ max-width:clamp(560px,90vw,1200px); }
   .landing-mission{
     font-family:var(--sans);
     font-size:11px; font-weight:500;
@@ -418,6 +418,38 @@
     align-self:stretch;
   }
   .chat-send:hover{ background:var(--magenta-deep); }
+  /* ---------- manifesto ---------- */
+  .manifesto{
+    padding-block:var(--section-y);
+    border-bottom:1px solid var(--line);
+    background:var(--bone);
+  }
+  .manifesto-inner{ max-width:760px; }
+  .manifesto .meta-line{
+    display:flex; align-items:center; gap:14px;
+    padding-bottom:18px;
+    border-bottom:1px solid var(--line);
+    font-family:var(--sans); font-size:11px; font-weight:500;
+    letter-spacing:.22em; text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:clamp(28px,5vw,48px);
+  }
+  .manifesto-headline{
+    font-family:var(--serif); font-weight:300;
+    font-size:clamp(28px,4vw,48px);
+    line-height:1.12; letter-spacing:-0.015em;
+    color:var(--ink); margin-bottom:clamp(24px,3vw,32px);
+  }
+  .manifesto-copy{
+    display:flex; flex-direction:column; gap:clamp(20px,2.4vw,32px);
+    font-family:var(--sans); font-size:clamp(15px,1.1vw,17px);
+    line-height:1.72; color:var(--ink-soft);
+  }
+  .manifesto-copy p{ margin:0; }
+  .manifesto-copy .strong{
+    color:var(--ink); font-weight:500;
+  }
+  .manifesto-copy .accent{ color:var(--magenta); font-style:italic; }
   /* ---------- thesis ---------- */
   .thesis{
     padding-block:clamp(96px,14vw,200px);
@@ -625,14 +657,11 @@
 <!-- NAV -->
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="#landing" class="nav-brand" aria-label="KASKAL home">
-      <span class="km" style="width:130px;"><svg><use href="#kaskal-wordmark"/></svg></span>
-    </a>
-    <nav class="nav-meta" aria-label="Primary">
+    <nav class="nav-meta" aria-label="Primary" style="margin-right:auto;">
       <span class="label-mono">Building / 2026</span>
       <span class="label-mono">Global IP Economy</span>
+      <a href="#waitlist" class="nav-cta">Request access</a>
     </nav>
-    <a href="#waitlist" class="nav-cta">Request access</a>
   </div>
 </header>
 <!-- LANDING -->
@@ -647,7 +676,7 @@
     </div>
     <nav class="landing-choices" aria-label="Entry">
       <a href="#product" class="landing-choice creator" data-mode="creator">
-        I make stories
+        I create stories
         <span class="ch-arrow">Enter →</span>
       </a>
       <a href="#product" class="landing-choice industry" data-mode="industry">
@@ -734,6 +763,28 @@
     </div>
   </div>
 </section>
+<!-- MANIFESTO -->
+<section class="manifesto" id="manifesto">
+  <div class="wrap manifesto-inner">
+    <div class="meta-line">
+      <span>§ 02 — Why This Matters</span>
+    </div>
+    <h2 class="manifesto-headline">The world's greatest stories are being <span class="accent">lost.</span></h2>
+    <div class="manifesto-copy">
+      <p>IP is currently opaque, unpriced, and untradeable. But underneath that problem is something more fundamental: <span class="strong">the world's greatest stories are at risk of being lost or undervalued because there's no infrastructure to preserve and amplify them.</span></p>
+
+      <p>A storyteller in Lagos has an oral tradition passed down through generations. But it has no written form. No market understanding. No preservation mechanism.</p>
+
+      <p>A writer in Hanoi has a story that resonates culturally but is incomprehensible to Western narrative frameworks. So it stays unrecognized.</p>
+
+      <p>A folklore keeper in rural India has narratives that are 500 years old but have no way to reach the world.</p>
+
+      <p><span class="strong">KASKAL preserves human creativity</span> by making it legible, valuable, and tradeable. Every story submitted becomes indexed, analyzed, and connected to the global market. Your culture's narrative becomes visible.</p>
+
+      <p style="margin-top:clamp(32px,4vw,48px); padding-top:clamp(24px,3vw,32px); border-top:1px solid var(--line);"><span class="strong">The Raw IP is Always Human.</span> We use AI responsibly to systematize cultural understanding, encode and transcribe stories in 100+ languages, help translate cultural context to diverse audiences, trace provenance and ensure creators are credited, and prevent cultural appropriation. At KASKAL, AI is always in service of human creativity—never its replacement.</p>
+    </div>
+  </div>
+</section>
 <!-- THESIS -->
 <section class="thesis" id="thesis">
   <div class="wrap">
@@ -741,9 +792,10 @@
       <span>§ 02 — The Vision</span>
     </div>
     <blockquote>
-      Narrative IP should be <span class="italic">a tradeable asset.</span><br>
-      Creators from <span class="accent">everywhere</span> will compete on equal footing.
+      Building a global narrative IP economy where IP is <span class="italic">the new asset class.</span><br>
+      Democratizing<span class="accent">storytelling</span> for creators everywhere, anywhere.
     </blockquote>
+    <div class="attrib">KASKAL North Star — 2036</div>
   </div>
 </section>
 <!-- WAITLIST -->
